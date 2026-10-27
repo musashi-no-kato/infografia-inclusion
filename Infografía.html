@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frases discriminatorias e incluyentes</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fdfaf6;
+        color: #1a2530;
+        margin: 0;
+        padding: 16px;
+    }
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 28px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .header-image {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border: 3px solid #008891;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        display: block;
+        box-shadow: 0 6px 18px rgba(15, 48, 87, 0.16);
+    }
+    h1 {
+        color: #0f3057;
+        text-align: center;
+        font-size: 2.2em;
+        margin: 0 0 5px;
+    }
+    .subtitle {
+        text-align: center;
+        color: #596e79;
+        font-size: 1em;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #0f3057;
+        padding-bottom: 14px;
+    }
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-bottom: 22px;
+        text-align: center;
+        gap: 12px;
+    }
+    .stat-box {
+        padding: 14px 10px;
+        background-color: #0f3057;
+        color: #fdfaf6;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .stat-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 8px;
+        padding: 4px;
+        box-sizing: border-box;
+        object-fit: contain;
+        background-color: #ffffff;
+        border: 2px solid #008891;
+        border-radius: 50%;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+    .stat-number {
+        font-size: 1.6em;
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+    .intro-text {
+        font-size: 1em;
+        line-height: 1.5;
+        margin-bottom: 22px;
+    }
+    h2 {
+        color: #0f3057;
+        border-left: 5px solid #008891;
+        padding-left: 10px;
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .section-icon {
+        width: 50px;
+        height: 50px;
+        padding: 3px;
+        box-sizing: border-box;
+        object-fit: contain;
+        flex-shrink: 0;
+        background-color: #ffffff;
+        border: 2px solid #008891;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(15, 48, 87, 0.18);
+    }
+    .timeline {
+        border-left: 3px solid #008891;
+        padding-left: 16px;
+        margin-bottom: 22px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 22px;
+    }
+    .timeline-item {
+        margin-bottom: 8px;
+    }
+    .timeline-date {
+        font-weight: bold;
+        color: #008891;
+    }
+    .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+    .bad-phrase, .good-phrase {
+        padding: 14px;
+        border-radius: 8px;
+    }
+    .bad-phrase {
+        background-color: #ffe6e6;
+        border-left: 5px solid #d9534f;
+    }
+    .good-phrase {
+        background-color: #e6ffe6;
+        border-left: 5px solid #5cb85c;
+    }
+    .origins-section {
+        background-color: #f4f7f6;
+        padding: 14px;
+        border-radius: 8px;
+        margin-bottom: 22px;
+    }
+    .origin-item {
+        margin-bottom: 14px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+    }
+    .origin-icon {
+        width: 48px;
+        height: 48px;
+        padding: 2px;
+        box-sizing: border-box;
+        object-fit: contain;
+        flex-shrink: 0;
+        margin-top: 2px;
+        background-color: #ffffff;
+        border: 2px solid #008891;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(15, 48, 87, 0.16);
+    }
+    .origin-title {
+        font-weight: bold;
+        color: #0f3057;
+        margin-bottom: 5px;
+    }
+    .footer {
+        text-align: center;
+        margin-top: 22px;
+        padding-top: 14px;
+        border-top: 2px solid #596e79;
+    }
+    .message {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #008891;
+        font-style: italic;
+    }
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+        .stats-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .timeline {
+            grid-template-columns: 1fr;
+        }
+        .comparison-grid {
+            grid-template-columns: 1fr;
+        }
+        .header-image {
+            height: 200px;
+        }
+        .section-icon {
+            width: 44px;
+            height: 44px;
+        }
+    }
+    @media (max-width: 480px) {
+        body {
+            padding: 8px;
+        }
+        .container {
+            padding: 14px;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+        .header-image {
+            height: 160px;
+        }
+        .stat-box {
+            padding: 12px 8px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <!-- Imagen de encabezado -->
+        <img src="images.jpeg" alt="La palabra discriminación escrita a mano" class="header-image">
+        
+        <h1>Frases discriminatorias e incluyentes</h1>
+        <div class="subtitle">Desarrollo Personal · Ingeniería de Datos e IA · Prof. Salua del Carmen Nader</div>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <img src="Unknown-2.jpeg" alt="Ícono de calendario" class="stat-icon">
+                <div class="stat-number">3</div>
+                <div>Frases cotidianas analizadas</div>
+            </div>
+            <div class="stat-box">
+                <img src="Unknown.jpeg" alt="Ícono de reloj de arena" class="stat-icon">
+                <div class="stat-number">270</div>
+                <div>Personas LGBTIQ+ asesinadas en Colombia (2025)</div>
+            </div>
+            <div class="stat-box">
+                <img src="Unknown.jpeg" alt="Ícono de reloj de arena" class="stat-icon">
+                <div class="stat-number">32 h</div>
+                <div>Una víctima cada 32 horas</div>
+            </div>
+            <div class="stat-box">
+                <img src="Unknown-2.jpeg" alt="Ícono de calendario" class="stat-icon">
+                <div class="stat-number">1980</div>
+                <div>Año en que se despenaliza en Colombia</div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Algunas frases parecen inofensivas, pero reflejan prejuicios sobre la inteligencia, el género y la apariencia. Aunque hay avances en igualdad y derechos, la discriminación persiste. Hablar con respeto ayuda a que todas las personas se sientan valoradas.
+        </div>
+
+        <h2>
+            <img src="Unknown-4.jpeg" alt="Ícono de columna" class="section-icon">
+            Cronología de la discriminación
+        </h2>
+        <div class="timeline">
+            <div class="timeline-item"><span class="timeline-date">ANTIGÜEDAD:</span> La educación era para pocos; se unía belleza con virtud.</div>
+            <div class="timeline-item"><span class="timeline-date">EDAD MEDIA:</span> Se veía la diferencia física como castigo.</div>
+            <div class="timeline-item"><span class="timeline-date">COLONIA:</span> Se persiguió a indígenas por sus prácticas; muchos fueron asesinados.</div>
+            <div class="timeline-item"><span class="timeline-date">1936:</span> Colombia castigaba la homosexualidad con prisión.</div>
+            <div class="timeline-item"><span class="timeline-date">1971:</span> George Weinberg crea el término "homofobia".</div>
+            <div class="timeline-item"><span class="timeline-date">1980–1990:</span> Colombia la despenaliza; la OMS deja de verla como enfermedad.</div>
+            <div class="timeline-item"><span class="timeline-date">2025:</span> 270 personas LGBTIQ+ asesinadas en Colombia: una cada 32 horas.</div>
+        </div>
+
+        <h2>
+            <img src="Unknown-5.jpeg" alt="Ícono de bombilla" class="section-icon">
+            Frases que discriminan y cómo decirlas mejor
+        </h2>
+        
+        <div class="comparison-grid">
+            <div class="bad-phrase">
+                <strong>POR INTELIGENCIA</strong><br>
+                ✕ "Yo soy más inteligente que tú"
+            </div>
+            <div class="good-phrase">
+                <strong>MEJOR DECIR</strong><br>
+                ✓ "Tenemos formas diferentes de pensar, ¿cómo lo abordarías tú?"<br><br>
+                Cada persona aprende y aporta a su manera. La inteligencia no es una competencia.
+            </div>
+            
+            <div class="bad-phrase">
+                <strong>POR GÉNERO / HOMOFOBIA</strong><br>
+                ✕ "Tú eres como marica"
+            </div>
+            <div class="good-phrase">
+                <strong>MEJOR DECIR</strong><br>
+                ✓ "No te lo tomes tan a la ligera"<br><br>
+                Evita usar palabras ofensivas como burla. Respeta a todas las personas, sin importar a quién amen.
+            </div>
+            
+            <div class="bad-phrase">
+                <strong>POR APARIENCIA</strong><br>
+                ✕ "¿Qué? ¿No cabes?"
+            </div>
+            <div class="good-phrase">
+                <strong>MEJOR DECIR</strong><br>
+                ✓ "Adelante, pasa con confianza"<br><br>
+                No juzgues cuerpos ajenos. Todas las personas merecen comodidad y respeto.
+            </div>
+        </div>
+
+        <h2>
+            <img src="Unknown-6.jpeg" alt="Ícono de mazo" class="section-icon">
+            De dónde vienen estas discriminaciones
+        </h2>
+        <div class="origins-section">
+            <div class="origin-item">
+                <img src="Unknown-5.jpeg" alt="Bombilla" class="origin-icon">
+                <div>
+                    <div class="origin-title">Discriminación intelectual ("Yo soy más inteligente que tú")</div>
+                    Desde la antigüedad, el acceso a la educación se limitó a unos pocos. Aún hoy se excluye a personas por sus conocimientos, capacidades o forma de aprender.
+                </div>
+            </div>
+            <div class="origin-item">
+                <img src="Unknown-6.jpeg" alt="Mazo" class="origin-icon">
+                <div>
+                    <div class="origin-title">Discriminación por género / homofobia ("Tú eres como marica")</div>
+                    En la colonia, se persiguió a indígenas por sus prácticas homosexuales. Colombia las castigó con prisión desde 1936 hasta su despenalización en 1980. En 1971, George Weinberg acuñó "homofobia"; en 1990, la OMS dejó de clasificar la homosexualidad como enfermedad mental. Hubo avances en derechos, pero la violencia sigue: en 2025 asesinaron a 270 personas LGBTIQ+ en Colombia.
+                </div>
+            </div>
+            <div class="origin-item">
+                <img src="Unknown-7.jpeg" alt="Manos estrechándose" class="origin-icon">
+                <div>
+                    <div class="origin-title">Discriminación por apariencia física ("¿Qué? ¿No cabes?")</div>
+                    Desde la antigüedad, se vinculó la belleza con la virtud y la diferencia física con un castigo. Hoy persisten estándares de belleza, aunque hay leyes y movimientos contra el rechazo corporal.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="message">"La inteligencia real no compite."</div>
+            <p><strong>Hay avances, pero falta camino.</strong><br>
+            Existen más derechos y acceso a la educación, pero sigue la violencia por prejuicio. El respeto empieza al hablar.</p>
+        </div>
+    </div>
+</body>
+</html>
