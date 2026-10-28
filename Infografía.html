@@ -23,6 +23,7 @@
     .header-image {
         width: 100%;
         height: 240px;
+        background-color: #ffffff;
         object-fit: contain;
         object-position: center;
         border: 3px solid #008891;
@@ -34,7 +35,9 @@
     h1 {
         color: #0f3057;
         text-align: center;
+        font-family: Georgia, 'Times New Roman', serif;
         font-size: 2.2em;
+        letter-spacing: 0.02em;
         margin: 0 0 5px;
     }
     .subtitle {
@@ -86,6 +89,8 @@
     }
     h2 {
         color: #0f3057;
+        font-family: Georgia, 'Times New Roman', serif;
+        letter-spacing: 0.01em;
         border-left: 5px solid #008891;
         padding-left: 10px;
         margin-top: 24px;
@@ -130,6 +135,19 @@
         padding: 14px;
         border-radius: 8px;
     }
+    .phrase-image {
+        display: block;
+        width: 76px;
+        height: 76px;
+        object-fit: contain;
+        margin: 12px auto 0;
+        padding: 5px;
+        box-sizing: border-box;
+        border: 2px solid #d9534f;
+        border-radius: 50%;
+        background-color: #ffe6e6;
+        mix-blend-mode: multiply;
+    }
     .bad-phrase {
         background-color: #ffe6e6;
         border-left: 5px solid #d9534f;
@@ -166,6 +184,7 @@
     .origin-title {
         font-weight: bold;
         color: #0f3057;
+        font-family: Georgia, 'Times New Roman', serif;
         margin-bottom: 5px;
     }
     .footer {
@@ -225,7 +244,7 @@
         <!-- Imagen de encabezado -->
         <img src="images.jpeg" alt="La palabra discriminación escrita a mano" class="header-image">
         
-        <h1>Frases discriminatorias e incluyentes</h1>
+        <h1>Frases capacitistas e incluyentes</h1>
         <div class="subtitle">Desarrollo Personal · Ingeniería de Datos e IA · Prof. Salua del Carmen Nader</div>
         
         <div class="stats-container">
@@ -236,23 +255,23 @@
             </div>
             <div class="stat-box">
                 <img src="Unknown.jpeg" alt="Ícono de reloj de arena" class="stat-icon">
-                <div class="stat-number">270</div>
-                <div>Personas LGBTIQ+ asesinadas en Colombia (2025)</div>
+                <div class="stat-number">15%</div>
+                <div>Población mundial con discapacidad (OMS)</div>
             </div>
             <div class="stat-box">
                 <img src="Unknown.jpeg" alt="Ícono de reloj de arena" class="stat-icon">
-                <div class="stat-number">32 h</div>
-                <div>Una víctima cada 32 horas</div>
+                <div class="stat-number">1 de 5</div>
+                <div>Personas neurodivergentes excluidas en TI/estudio</div>
             </div>
             <div class="stat-box">
                 <img src="Unknown-2.jpeg" alt="Ícono de calendario" class="stat-icon">
-                <div class="stat-number">1980</div>
-                <div>Año en que se despenaliza en Colombia</div>
+                <div class="stat-number">2006</div>
+                <div>Año de la Convención de la ONU sobre Discapacidad</div>
             </div>
         </div>
 
         <div class="intro-text">
-            Algunas frases parecen inofensivas, pero reflejan prejuicios sobre la inteligencia, el género y la apariencia. Aunque hay avances en igualdad y derechos, la discriminación persiste. Hablar con respeto ayuda a que todas las personas se sientan valoradas.
+            Algunas frases parecen inofensivas, pero reflejan prejuicios sobre la salud mental, la movilidad y las capacidades cognitivas. Aunque hay avances en accesibilidad digital e IA incluyente, el capacitismo persiste. Hablar con respeto ayuda a que todas las personas se sientan valoradas.
         </div>
 
         <h2>
@@ -260,13 +279,12 @@
             Cronología de la discriminación
         </h2>
         <div class="timeline">
-            <div class="timeline-item"><span class="timeline-date">ANTIGÜEDAD:</span> La educación era para pocos; se unía belleza con virtud.</div>
-            <div class="timeline-item"><span class="timeline-date">EDAD MEDIA:</span> Se veía la diferencia física como castigo.</div>
-            <div class="timeline-item"><span class="timeline-date">COLONIA:</span> Se persiguió a indígenas por sus prácticas; muchos fueron asesinados.</div>
-            <div class="timeline-item"><span class="timeline-date">1936:</span> Colombia castigaba la homosexualidad con prisión.</div>
-            <div class="timeline-item"><span class="timeline-date">1971:</span> George Weinberg crea el término "homofobia".</div>
-            <div class="timeline-item"><span class="timeline-date">1980–1990:</span> Colombia la despenaliza; la OMS deja de verla como enfermedad.</div>
-            <div class="timeline-item"><span class="timeline-date">2025:</span> 270 personas LGBTIQ+ asesinadas en Colombia: una cada 32 horas.</div>
+            <div class="timeline-item"><span class="timeline-date">ANTIGÜEDAD:</span> Se aislaba o desechaba a personas con diferencias físicas o mentales por considerarlas "defectuosas".</div>
+            <div class="timeline-item"><span class="timeline-date">EDAD MEDIA:</span> Se veía la diversidad funcional como un castigo divino o posesión demoníaca.</div>
+            <div class="timeline-item"><span class="timeline-date">COLONIA / SIGLO XIX:</span> Surgió el modelo médico: se trataba a la persona como un "enfermo" que debía ser corregido o institucionalizado.</div>
+            <div class="timeline-item"><span class="timeline-date">1970:</span> Nace el movimiento global de Vida Independiente bajo el lema <em>"Nada sobre nosotros sin nosotros"</em>.</div>
+            <div class="timeline-item"><span class="timeline-date">2006:</span> La ONU aprueba la Convención Internacional sobre los Derechos de las Personas con Discapacidad.</div>
+            <div class="timeline-item"><span class="timeline-date">2020–2026:</span> Avances en accesibilidad digital e IA, pero persisten sesgos en algoritmos y en el lenguaje cotidiano.</div>
         </div>
 
         <h2>
@@ -276,33 +294,36 @@
         
         <div class="comparison-grid">
             <div class="bad-phrase">
-                <strong>POR INTELIGENCIA</strong><br>
-                ✕ "Yo soy más inteligente que tú"
+                <strong>POR SALUD MENTAL / NEURODIVERSIDAD</strong><br>
+                ✕ "Qué bipolar estás hoy / Tan autista que eres"
+                <img src="pendejo.png" alt="Ilustración de una cabeza con una curita" class="phrase-image">
             </div>
             <div class="good-phrase">
                 <strong>MEJOR DECIR</strong><br>
-                ✓ "Tenemos formas diferentes de pensar, ¿cómo lo abordarías tú?"<br><br>
-                Cada persona aprende y aporta a su manera. La inteligencia no es una competencia.
+                ✓ "Tienes cambios de opinión muy rápidos / Prefieres trabajar de forma independiente"<br><br>
+                Evita usar condiciones médicas o neurodivergencias como insultos o metáforas despectivas.
             </div>
             
             <div class="bad-phrase">
-                <strong>POR GÉNERO / HOMOFOBIA</strong><br>
-                ✕ "Tú eres como marica"
+                <strong>POR CAPACIDAD FÍSICA O SENSORIAL</strong><br>
+                ✕ "¿Estás ciego o qué? / Avanzas a paso de minusválido"
+                <img src="invalido.jpeg" alt="Símbolo de accesibilidad en silla de ruedas" class="phrase-image">
             </div>
             <div class="good-phrase">
                 <strong>MEJOR DECIR</strong><br>
-                ✓ "No te lo tomes tan a la ligera"<br><br>
-                Evita usar palabras ofensivas como burla. Respeta a todas las personas, sin importar a quién amen.
+                ✓ "Revisemos bien los datos juntos / Vamos a un ritmo más constante"<br><br>
+                Las barreras están en el entorno, no en las personas. El lenguaje respetuoso dignifica y no limita.
             </div>
             
             <div class="bad-phrase">
-                <strong>POR APARIENCIA</strong><br>
-                ✕ "¿Qué? ¿No cabes?"
+                <strong>POR CONDESCENDENCIA (CAPACITISMO INVISIBLE)</strong><br>
+                ✕ "A pesar de su condición, logró programar / Es un ejemplo de vida"
+                <img src="inteligente.png" alt="Ilustración de un perfil con piezas de rompecabezas" class="phrase-image">
             </div>
             <div class="good-phrase">
                 <strong>MEJOR DECIR</strong><br>
-                ✓ "Adelante, pasa con confianza"<br><br>
-                No juzgues cuerpos ajenos. Todas las personas merecen comodidad y respeto.
+                ✓ "Es un excelente profesional y demostró gran talento en el proyecto"<br><br>
+                No juzgues ni sobre-heroices el desempeño cotidiano. Todas las personas merecen comodidad y respeto.
             </div>
         </div>
 
@@ -314,30 +335,30 @@
             <div class="origin-item">
                 <img src="Unknown-5.jpeg" alt="Bombilla" class="origin-icon">
                 <div>
-                    <div class="origin-title">Discriminación intelectual ("Yo soy más inteligente que tú")</div>
-                    Desde la antigüedad, el acceso a la educación se limitó a unos pocos. Aún hoy se excluye a personas por sus conocimientos, capacidades o forma de aprender.
+                    <div class="origin-title">Discriminación por salud mental ("Qué bipolar / Tan autista"):</div>
+                    Desde la antigüedad, se estigmatizó la salud mental y la neurodivergencia, asociándolas con incapacidad o inestabilidad. Aún hoy se excluye a personas por sus formas diferentes de procesar información.
                 </div>
             </div>
             <div class="origin-item">
                 <img src="Unknown-6.jpeg" alt="Mazo" class="origin-icon">
                 <div>
-                    <div class="origin-title">Discriminación por género / homofobia ("Tú eres como marica")</div>
-                    En la colonia, se persiguió a indígenas por sus prácticas homosexuales. Colombia las castigó con prisión desde 1936 hasta su despenalización en 1980. En 1971, George Weinberg acuñó "homofobia"; en 1990, la OMS dejó de clasificar la homosexualidad como enfermedad mental. Hubo avances en derechos, pero la violencia sigue: en 2025 asesinaron a 270 personas LGBTIQ+ en Colombia.
+                    <div class="origin-title">Discriminación por capacidad física ("¿Estás ciego? / Paso de minusválido"):</div>
+                    Históricamente, el diseño de herramientas, ciudades y tecnología se pensó solo para cuerpos "estándar". Hoy persisten barreras de accesibilidad y expresiones que usan la discapacidad como falta de capacidad.
                 </div>
             </div>
             <div class="origin-item">
                 <img src="Unknown-7.jpeg" alt="Manos estrechándose" class="origin-icon">
                 <div>
-                    <div class="origin-title">Discriminación por apariencia física ("¿Qué? ¿No cabes?")</div>
-                    Desde la antigüedad, se vinculó la belleza con la virtud y la diferencia física con un castigo. Hoy persisten estándares de belleza, aunque hay leyes y movimientos contra el rechazo corporal.
+                    <div class="origin-title">Discriminación por condescendencia ("Ejemplo de vida / A pesar de su condición"):</div>
+                    Surge de ver la diversidad funcional como una tragedia a superar y no como una variante natural humana. Aunque hay leyes y tecnología asistiva, persiste la lástima en el trato social.
                 </div>
             </div>
         </div>
 
         <div class="footer">
-            <div class="message">"La inteligencia real no compite."</div>
+            <div class="message">"La verdadera accesibilidad empieza en el lenguaje."</div>
             <p><strong>Hay avances, pero falta camino.</strong><br>
-            Existen más derechos y acceso a la educación, pero sigue la violencia por prejuicio. El respeto empieza al hablar.</p>
+            Existen más herramientas digitales e IA accesible, pero sigue el prejuicio cotidiano. El respeto empieza al hablar.</p>
         </div>
     </div>
 </body>
